@@ -1,8 +1,54 @@
 https://www.youtube.com/user/madhurbhatia89 
-command: create table
+
+command: CREATE DATABASE
+command: USE
+command: DROP DATABASE
+command: CREATE TABLE
+command: DESC
+
 Meaning: A table is a database object that is composed of rows and columns and contains related data.
 Meaning: A field is a column in a table that is supposed to provide specific information about all the records in the table.
 Meaning: A record is a row in a table, or a horizontal entity of a table.
 Meaning: A column is a vertical entity in a table that contains information associated with a specific field.
 Meaning: null value is a no vlaue; it is not a space or zero, it is nothing. 
 Meaning: Data-type is a property that specifies the type of data you can put in your table.
+
+data-type: Numeric Field - Bigint (really big values)
+data-type: Numeric field - Int (big values)
+data-type: Numeric field - Smallint (-32,768 to 32,767
+data-type: Numeric field - Tinyint (0 to 255)
+data-type: Numeric field - Decimal (m,d)
+data-type: Numeric field - Numeric (Same as Decimal)
+data-type: Numeric field - Float (m,d) --> for Float data-type, display length (m0 and number of decimals (d) are optional
+data-type: Date and Time field - Datetime (YYY-MM-DD HH:MM:SS)
+data-type: Date and Time field - Date (YYY-MM-DD)
+data-type: Date and Time field - Time (HH:MM:SS)
+data-type: Date and Time field - Year (YYY)
+data-type: Character field - Char(m)
+data-type: Character field - Varchar(m)
+data-type: Character field - Text (to store large amount of text)
+data-type: Image field - Blob (Binary Large Object)
+
+constraint: Not Null - If you want to make sure that a field gets some value for every rowin the table, apply the not null constriant to it.
+constraint: Default - If while populating a table you miss giving a column some value, the default value will be used.
+constraint: Unique - Makes sure that all values entered for the field on which the constraint is applied are different.
+constraint: Primary Key - Not Null + Unique; Some value would have to be provided in each row and all the values entered must be different.
+constraint: Foreign Key
+constraint: Check Constraint
+
+step: Name the table
+step: Define the columns
+step: Mention data types of columns
+step: constraints
+
+Syntax of CRETAE TABLE statement
+CREATE TABLE table_name(
+col 1 datatype,
+col 2 datatype,
+col 3 datatype
+.
+.
+.
+col n datatype,
+PRIMARY KEY(column));
+
