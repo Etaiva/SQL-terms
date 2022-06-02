@@ -5,3 +5,4 @@ Meaning: A field is a column in a table that is supposed to provide specific inf
 Meaning: A record is a row in a table, or a horizontal entity of a table.
 Meaning: A column is a vertical entity in a table that contains information associated with a specific field.
 Meaning: null value is a no vlaue; it is not a space or zero, it is nothing. 
+Meaning: Data-type is a property that specifies the type of data you can put in your table.
