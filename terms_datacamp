@@ -1,0 +1,43 @@
+Command - primary	Command - supplement	Command - Variable
+SELECT	
+DISTINCT
+COUNT()
+AVG()
+MAX()
+SUM()
+MIN()
+AS	
+* [wild card]
+SELCT (4*3);
++
+-
+* 
+/
+FROM		
+;		
+WHERE	AND
+OR
+BETWEEN
+IN
+IS NULL
+IS NOT NULL
+LIKE
+NOT LIKE	‘ ‘ 
+= equal
+<> not equal OR !=
+< less than
+> greater than
+<= less than or equal to
+>= greater than or equal to
+%
+ORDER BY
+Ascending by default
+DESC	
+= equal
+<> not equal OR !=
+< less than
+> greater than
+<= less than or equal to
+>= greater than or equal to
+HAVING		
+LIMIT		
