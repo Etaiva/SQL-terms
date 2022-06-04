@@ -15,15 +15,15 @@ Meaning: Data-type is a property that specifies the type of data you can put in 
 
 data-type: Numeric Field - Bigint (really big values)
 data-type: Numeric field - Int (big values)
-data-type: Numeric field - Smallint (-32,768 to 32,767
+data-type: Numeric field - Smallint (-32,768 to 32,767)
 data-type: Numeric field - Tinyint (0 to 255)
 data-type: Numeric field - Decimal (m,d)
 data-type: Numeric field - Numeric (Same as Decimal)
 data-type: Numeric field - Float (m,d) --> for Float data-type, display length (m0 and number of decimals (d) are optional
 data-type: Date and Time field - Datetime (YYY-MM-DD HH:MM:SS)
-data-type: Date and Time field - Date (YYY-MM-DD)
+data-type: Date and Time field - Date (YYYY-MM-DD)
 data-type: Date and Time field - Time (HH:MM:SS)
-data-type: Date and Time field - Year (YYY)
+data-type: Date and Time field - Year (YYYY)
 data-type: Character field - Char(m)
 data-type: Character field - Varchar(m)
 data-type: Character field - Text (to store large amount of text)
@@ -41,7 +41,8 @@ step: Define the columns
 step: Mention data types of columns
 step: constraints
 
-Syntax of CRETAE TABLE statement
+Syntax: 
+CREATE TABLE statement
 CREATE TABLE table_name(
 col 1 datatype,
 col 2 datatype,
@@ -51,4 +52,18 @@ col 3 datatype
 .
 col n datatype,
 PRIMARY KEY(column));
+
+Syntax:
+CREATE TABLE new_table_name AS
+SELECT [col 1, col 2, col 3, ..., col n)]
+FROM exisiting_table_name
+[WHERE];
+
+Syntax:
+INSERT INTO table_name (col 1, col 2, ..., col n)
+VALUES (val 1, val 2, ..., val n)
+
+Syntax:
+INSERT INTO table_name
+VALUES (val 1, val 2, ..., val n)
 
