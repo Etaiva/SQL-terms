@@ -1,0 +1,47 @@
+/** Grocery list: 
+Bananas (4)
+Peanut Butter (1)
+Dark Chocolate Bars (2)
+**/
+
+CREATE TABLE groceries (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER );
+
+INSERT INTO groceries VALUES (1, "Bananas", 4);
+INSERT INTO groceries VALUES (2, "Peanut Butter", 1);
+INSERT INTO groceries VALUES (3, "Dark Chocolate Bars", 2);
+SELECT * FROM groceries;
+
+What are your favorite books? You can make a database table to store them in! In this first step, create a table to store your list of books. 
+It should have columns for id, name, and rating. (I voluntarily added author)
+/** Book list: 
+SQL All-In-One For Dummies by Allen Taylor (5)
+Exploring Data Tables, Trends, and Shapes by David C. Hoaglin, Frederick Mosteller (6)
+Naked Statistics Stripping the Dread from the Data by Charles Wheelan (8)
+The Intelligence Revolution Transforming Your Business With AI by Bernard Marr (8)
+Practical SQL by Anthony DeBarros (9)
+**/
+
+CREATE TABLE books (id INTEGER PRIMARY KEY, name TEXT, author TEXT, rating INTEGER);
+
+INSERT INTO books VALUES (1, "SQL All-In-One For Dummies", "Taylor", 5);
+INSERT INTO books VALUES (2, "Exploring Data Tables, Trends, and Shapes","Hoaglin and Mostellar", 6);
+INSERT INTO books VALUES (3, "Naked Statistics","Wheelan", 8);
+INSERT INTO books VALUES (4, "The Intelligence Revolution","Marr", 8);
+INSERT INTO books VALUES (5, "Practical SQL","DeBarros", 9);
+SELECT * FROM books;
+
+CREATE TABLE groceries (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER);
+INSERT INTO groceries VALUES (1, "Bananas", 4, 7);
+INSERT INTO groceries VALUES(2, "Peanut Butter", 1, 2);
+INSERT INTO groceries VALUES(3, "Dark Chocolate Bars", 2, 2);
+INSERT INTO groceries VALUES(4, "Ice cream", 1, 12);
+INSERT INTO groceries VALUES(5, "Cherries", 6, 2);
+INSERT INTO groceries VALUES(6, "Chocolate syrup", 1, 4);
+
+SELECT * FROM groceries WHERE aisle > 5 ORDER BY aisle;
+
+This database contains an incomplete list of box office hits and their release year. 
+In this challenge, you're going to get the results back out of the database in different ways! 
+In this first step, just select all the movies.
+
+
