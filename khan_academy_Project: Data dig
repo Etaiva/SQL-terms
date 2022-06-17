@@ -59,3 +59,24 @@ INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2015, 
 INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2015, 02/27", "Earth", "Five Times Ten to the Fifth", 0);
 INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2015, 04/04", "Earth", "Investigator", 0);
 
+SELECT badge_name, MAX(energy_points) FROM badges;
+
+SELECT badge_name, MIN(energy_points) FROM badges;
+
+SELECT badge_type, AVG(energy_points) AS avg_energy_points FROM badges
+    GROUP BY badge_type
+    HAVING avg_energy_points >= 0;
+
+SELECT badge_name, badge_type, AVG(energy_points) AS avg_energy_points
+FROM badges
+    GROUP BY badge_type
+    HAVING energy_points >= 0
+    ;
+    
+SELECT badge_type, AVG(energy_points) AS avg_energy_points FROM badges
+    GROUP BY badge_type
+    HAVING avg_energy_points <= 0;
+    
+SELECT *
+FROM badges
+    WHERE badge_type = "Moon" OR badge_type = "Sun";
