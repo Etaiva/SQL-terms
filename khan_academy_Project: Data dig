@@ -1,0 +1,61 @@
+We’ve curated a set of interesting data sets for you: 
+NASA astronauts, https://gist.github.com/pamelafox/b98e03caca7d1ec14394a90ec1512cff 
+Superbowl results, https://gist.github.com/pamelafox/3d8ab901def3577a8bfc881f6255d3f6 
+Pokemon stats, https://gist.github.com/pamelafox/26b9357c6120d3d0d27c2b90c950e8c6
+NBA players, https://gist.github.com/pamelafox/6cda1115e2bcbc43e62cf4ff9d4158c7
+Top movies, https://gist.github.com/pamelafox/c705b02114ea3db0dff0
+Top countries by population, https://gist.github.com/pamelafox/ad4f6abbaac0a48aa781
+Solar system objects by size, https://gist.github.com/pamelafox/30acd9ca938c8a62fb92
+Marvel characters, https://gist.github.com/pamelafox/585364b62390ea720858
+Furniture store sales, https://gist.github.com/pamelafox/791ce9e4eb31abce2362
+Earned KA badges, https://gist.github.com/pamelafox/fac85fdac119cb98266b
+Winston's donut logs, https://gist.github.com/pamelafox/b90d715f2bd7984b372a
+Card game results, and https://gist.github.com/pamelafox/1ddbcb55f9ba1f6ec435
+NFL draft picks. https://gist.github.com/pamelafox/3360f582f3309dd4c25b
+
+Pick one of those data sets or create a data set like that, and use advanced SELECT queries to discover things about the data. 
+What sort of questions might one have about that data, like if they were using it for an app or a business idea? Here are some ideas:
+
+What are average, max, and min values in the data?
+What about those numbers per category in the data (using HAVING)?
+What ways are there to group the data values that don’t exist yet (using CASE)?
+What interesting ways are there to filter the data (using AND/OR)?
+
+We are changing the way that coding projects are saved to be more similar to coding challenges, 
+which means that we no longer automatically create a spin-off when you begin a project. 
+If you’d like to save this code to your profile when you’ve completed the project, please click the spin-off butto
+
+/*
+Earned Badges
+This table contains badges earned by a user, including the most recent date achieved, the type, the name, the # of energy points earned, and the activity earned from.
+Collected by: https://www.khanacademy.org/profile/chopsor/
+*/
+
+CREATE TABLE badges (
+    date TEXT,
+    badge_type TEXT,
+    badge_name TEXT,
+    energy_points INTEGER
+);
+
+INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2015, 04/12", "Sun", "Oracle", 0);
+INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2015, 04/28", "Earth", "Incredible Inspiration", 5000);
+INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2015, 01/29", "Challenge Patch", "Intro to JS: Drawing & Animation Mastery", 0);
+INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2014, 12/05", "Meteorite", "Thumbs Up", 0);
+INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2015, 04/28", "Moon", "1000 Kelvin", 1000);
+INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2015, 04/25", "Earth", "299,792,458 Meters per Second", 5000);
+INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2015, 03/20", "Sun", "Da Vinci", 200000);
+INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2015, 03/02", "Sun", "Newton", 150000);
+INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2015, 03/02", "Sun", "Hypatia", 125000);
+INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2015, 02/24", "Sun", "Kepler", 125000);
+INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2015, 02/24", "Sun", "Copernicus", 80000);
+INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2015, 02/07", "Sun", "Sally Ride", 35000);
+INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2015, 01/06", "Sun", "Magellan", 30000);
+INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2015, 02/24", "Earth", "Guru", 0);
+INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2014, 12/29", "Earth", "Work Horse", 14000);
+INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2014, 10/20", "Moon", "Redwood", 0);
+INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2013, 10/20", "Meteorite", "Cypress", 0);
+INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2015, 03/18", "Sun", "Millionaire", 0);
+INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2015, 02/27", "Earth", "Five Times Ten to the Fifth", 0);
+INSERT INTO badges (date, badge_type, badge_name, energy_points) VALUES ("2015, 04/04", "Earth", "Investigator", 0);
+
