@@ -190,3 +190,7 @@ SELECT students.first_name, students.last_name, buddies.email as buddy_email
     JOIN students buddies
     ON students.buddy_id = buddies.id;
     
+Challenge: Sequels in SQL
+Step 1
+We've created a table with all the 'Harry Potter' movies, with a sequel_id column that matches the id of the sequel for each movie. 
+Issue a SELECT that will show the title of each movie next to its sequel's title (or NULL if it doesn't have a sequel).
