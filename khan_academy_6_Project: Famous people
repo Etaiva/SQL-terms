@@ -10,54 +10,33 @@ Authors: What books did they write?
 Fictional characters: How are they related to other characters? What books do they show up in?
 
 /* Create table about the people and what they do here */
-CREATE TABLE famous_people (id INTEGER PRIMARY KEY, 
-    name TEXT,
-    category TEXT);
+CREATE TABLE author (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    age INTEGER,
+    nationality TEXT);
     
-INSERT INTO famous_people (name, category)
-    VALUES ("Will Smith", "actor");
-INSERT INTO famous_people (name, category)
-    VALUES ("Will Smith", "author");
-INSERT INTO famous_people (name, category)
-    VALUES ("Tom Cruise", "actor");
-INSERT INTO famous_people (name, category)
-    VALUES ("Will Smith", "singer");
-INSERT INTO famous_people (name, category)
-    VALUES ("Nicole Kidman", "actor");
+INSERT INTO author (fullname, age, nationality) VALUES ("Jim Collins", 64, "USA");
+INSERT INTO author (fullname, age, nationality) VALUES ("Tom Peters", 79, "USA");
+INSERT INTO author (fullname, age, nationality) VALUES ("Peter Senge", 75, "USA");
+INSERT INTO author (fullname, age, nationality) VALUES ("Lynda Gratton", 67, "UK");
+INSERT INTO author (fullname, age, nationality) VALUES ("J. K. Rowling", 56, "UK");
 
-CREATE TABLE content (id INTEGER PRIMARY KEY,
-    content_name TEXT,
-    category TEXT,
-    artist TEXT);
+CREATE table wealth (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author_id INTEGER,
+    net_worth TEXT,
+    source_wealth TEXT);
     
-INSERT INTO content (content_name, category, artist)
-    VALUES ("Just the Two of Us", "singer", "Will Smith");
-INSERT INTO content (content_name, category, artist)
-    VALUES ("Hancock", "actor", "Will Smith");
-INSERT INTO content (content_name, category, artist)
-    VALUES ("Will", "author", "Will Smith");
-INSERT INTO content (content_name, category, artist)
-    VALUES ("Mission Impossible", "actor", "Tom Cruise");
-INSERT INTO content (content_name, category, artist)
-    VALUES ("The Northman", "actor", "Nicole Kidman");
-    
-CREATE TABLE characters (id INTEGER PRIMARY KEY,
-    character_name TEXT,
-    famous_person TEXT,
-    publication_name TEXT,
-    publication_year INTEGER);
-    
-INSERT INTO characters (character_name, famous_person, publication_name, publication_year)
-    VALUES ("Queen Gudruin", "Nicole Kidman", "The Northman", "2022");
-INSERT INTO characters (character_name, famous_person, publication_name, publication_year)
-    VALUES ("Ethan Hunt", "Tom Cruise", "Mission Impossible", "1996");
-INSERT INTO characters (character_name, famous_person, publication_name, publication_year)
-    VALUES ("Willard Carroll Smith II", "Will Smith", "Will", "2021");
-INSERT INTO characters (character_name, famous_person, publication_name, publication_year)
-    VALUES ("John Hancock", "Will Smith", "Hancock", "2008");
-INSERT INTO characters (character_name, famous_person, publication_name, publication_year)
-    VALUES ("Prince of Bellair", "Will Smith", "Just the Two of Us", "2009");
-    
-SELECT famous_people.name FROM famous_people;
-    JOIN characters
-    ON famous_names.name = characters.famous_person;
+INSERT INTO wealth (author_id, net_worth, source_wealth) VALUES (1, "$30 million", "business research");
+INSERT INTO wealth (author_id, net_worth, source_wealth) VALUES (2, "$17 million", "business management practices");
+INSERT INTO wealth (author_id, net_worth, source_wealth) VALUES (3, "$5 million", "systmes scientist");
+INSERT INTO wealth (author_id, net_worth, source_wealth) VALUES (4, "$950,000", "business theorist");
+INSERT INTO wealth (author_id, net_worth, source_wealth) VALUES (5, "$1 billion", "fiction");
+
+
+/*Return total net worth for each billionare*/
+SELECT author.fullname, wealth.net_worth
+FROM author
+JOIN wealth
+ON author.id = wealth.author_id;
