@@ -11,46 +11,53 @@ Fictional characters: How are they related to other characters? What books do th
 
 /* Create table about the people and what they do here */
 CREATE TABLE famous_people (id INTEGER PRIMARY KEY, 
-    first_name TEXT,
-    last_name TEXT,
+    name TEXT,
     category TEXT);
     
 INSERT INTO famous_people (name, category)
     VALUES ("Will Smith", "actor");
 INSERT INTO famous_people (name, category)
-    VALUES ("Arnold Schwarzenegger", "actor");
-INSERT INTO famous_people (name, category)
     VALUES ("Will Smith", "author");
-INSERT INTO famous_people (name, category)
-    VALUES ("Arnold Schwarzenegger", "author");
 INSERT INTO famous_people (name, category)
     VALUES ("Tom Cruise", "actor");
 INSERT INTO famous_people (name, category)
     VALUES ("Will Smith", "singer");
 INSERT INTO famous_people (name, category)
     VALUES ("Nicole Kidman", "actor");
-INSERT INTO famous_people (name, category)
-    VALUES ("Maria Shriver", "author")
 
-CREATE TABLE content (id INTER PRIMARY KEY,
-    contet_name TEXT,
+CREATE TABLE content (id INTEGER PRIMARY KEY,
+    content_name TEXT,
     category TEXT,
-    artist TEXT;
+    artist TEXT);
     
 INSERT INTO content (content_name, category, artist)
-    VALUES ("Just the Two of Us", "singer", "Will Smith")
+    VALUES ("Just the Two of Us", "singer", "Will Smith");
 INSERT INTO content (content_name, category, artist)
-    VALUES ("Switch", "singer", "Will Smith")
+    VALUES ("Hancock", "actor", "Will Smith");
 INSERT INTO content (content_name, category, artist)
-    VALUES ("Hancock", "actor", "Will Smith")
+    VALUES ("Will", "author", "Will Smith");
 INSERT INTO content (content_name, category, artist)
-    VALUES ("After Earth", "actor", "Will Smith")
+    VALUES ("Mission Impossible", "actor", "Tom Cruise");
 INSERT INTO content (content_name, category, artist)
-    VALUES ("Will", "author", "Will Smith")
-INSERT INTO content (content_name, category, artist)
-    VALUES ("Terminator", "actor", "Arnold Schwarzenegger")
-INSERT INTO content (content_name, category, artist)
-    VALUES ("Conan", "actor", "Arnold Schwarzenegger")
-INSERT INTO content (content_name, category, artist)
-    VALUES ("Total Recall", "author", "Arnold Schwarzenegger")
-
+    VALUES ("The Northman", "actor", "Nicole Kidman");
+    
+CREATE TABLE characters (id INTEGER PRIMARY KEY,
+    character_name TEXT,
+    famous_person TEXT,
+    publication_name TEXT,
+    publication_year INTEGER);
+    
+INSERT INTO characters (character_name, famous_person, publication_name, publication_year)
+    VALUES ("Queen Gudruin", "Nicole Kidman", "The Northman", "2022");
+INSERT INTO characters (character_name, famous_person, publication_name, publication_year)
+    VALUES ("Ethan Hunt", "Tom Cruise", "Mission Impossible", "1996");
+INSERT INTO characters (character_name, famous_person, publication_name, publication_year)
+    VALUES ("Willard Carroll Smith II", "Will Smith", "Will", "2021");
+INSERT INTO characters (character_name, famous_person, publication_name, publication_year)
+    VALUES ("John Hancock", "Will Smith", "Hancock", "2008");
+INSERT INTO characters (character_name, famous_person, publication_name, publication_year)
+    VALUES ("Prince of Bellair", "Will Smith", "Just the Two of Us", "2009");
+    
+SELECT famous_people.name FROM famous_people;
+    JOIN characters
+    ON famous_names.name = characters.famous_person;
